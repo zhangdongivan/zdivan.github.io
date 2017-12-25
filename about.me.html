@@ -44,28 +44,6 @@
     var root = '';
 </script>
 
-<script type="text/javascript">
-    var conn, reloadTimer, connectTimer;
-    var connect = function() {
-        conn = new WebSocket('ws://' + location.host + '/live');
-        conn.onmessage = function(event) {
-            if (event.data === 'change') {
-                if (reloadTimer) clearTimeout(reloadTimer);
-                reloadTimer = setTimeout(function() {
-                    window.location.reload();
-                }, 200);
-            }
-        };
-        conn.onclose = function() {
-            if (connectTimer) clearTimeout(connectTimer);
-            connectTimer = setTimeout(function() {
-                connect();
-            }, 1000);
-        };
-    };
-    connect();
-</script>
-
 
         <meta name="keywords" content="">
         <meta name="description" content="关于作者">
@@ -96,11 +74,11 @@
                     
                     <span class="tags"></span>
                 </section>
-                <article class="content"><h2>纸小墨</h2>
+                <article class="content"><h2>SS火火</h2>
 
-<p>构建只为纯粹书写的博客。</p>
+<p>一个Android开发程序猿</p>
 
-<p><a href="http://www.chole.io/">http://www.chole.io/</a></p>
+<p><a href="https://zhangdongivan.github.io/">https://zhangdongivan.github.io/</a></p>
 </article>
                 <section class="author">
                     <div class="avatar" style="background-image: url(/images/avatar.png);"></div>
